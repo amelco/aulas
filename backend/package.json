@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "author": {
+    "name": "Andre Herman Freire Bezerra",
+    "email": "amelco.herman@gmail.com"
+  },
   "scripts": {
     "dev": "nodemon src/index.js"
   },
