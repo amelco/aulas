@@ -4,7 +4,9 @@ const Post = require('../models/Post');
 module.exports = {
     // lista posts
     async index(req, res) {
-
+        const posts = await Post.find().sort('-createdAt');
+        
+        return res.json(posts);
     },
 
     // armazena posts
