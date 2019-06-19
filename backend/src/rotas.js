@@ -1,6 +1,5 @@
 const express = require('express');
 const multer = require('multer');  // para acessar elementos POST atraves de req.body em multipart-formdata
-const PostController = require('./controllers/PostController');
 const uploadConfig = require('./config/upload');
 const PostController = require('./controllers/PostController');
 const LikeController = require('./controllers/LikeController');
@@ -9,6 +8,7 @@ const routes = new express.Router();
 const upload = multer(uploadConfig);
 
 // define as rotas e direciona pro controller
+routes.get('/', PostController.index);
 routes.get('/posts', PostController.index);
 routes.post('/posts', upload.single('image'), PostController.store);
 routes.post('/posts/:id/like', LikeController.store);
