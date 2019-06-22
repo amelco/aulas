@@ -11,7 +11,7 @@ const server = require('http').Server(app);
 // permite acesso ao protocolo websockets pelo server
 const io = require('socket.io')(server);
 
-// conecta ao servidor do banco de dados mongo através da string retirada do site 'mongo db atlas'
+// // conecta ao servidor do banco de dados mongo através da string retirada do site 'mongo db atlas'
 // mongoose.connect('mongodb+srv://semana:semana@cluster0-krc4r.mongodb.net/test?retryWrites=true&w=majority', {
 //     useNewUrlParser: true,  // config para utilizar a string acima
 // })
